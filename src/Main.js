@@ -16,7 +16,7 @@ const MainContent = ({ onSubmit }) => {
         return;
       }
       // Make API call to the server
-      const result = await axios.post('http://localhost:49549/generate', {  // localm port is 9000
+      const result = await axios.post('https://genaiexserver-f8ccf376d91e.herokuapp.com/generate', {  // localm port is 9000
         prompt: input,
       }, {
         headers: {
