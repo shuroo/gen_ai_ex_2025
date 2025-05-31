@@ -16,7 +16,7 @@ const MainContent = ({ onSubmit }) => {
         return;
       }
 
-      const serverUrl = 'https://genaiexserver-f8ccf376d91e.herokuapp.com/generate'
+      const serverUrl = 'https://genaiexserver-f8ccf376d91e.herokuapp.com/generate' ///
 
       console.log("url to reach:",serverUrl);
       // Make API call to the server
