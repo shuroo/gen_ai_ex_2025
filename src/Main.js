@@ -16,7 +16,7 @@ const MainContent = ({ onSubmit }) => {
         return;
       }
       // Make API call to the server
-      const result = await axios.post('http://localhost:9000/generate', {
+      const result = await axios.post('http://localhost:49549/generate', {  // localm port is 9000
         prompt: input,
       }, {
         headers: {
