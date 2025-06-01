@@ -7,6 +7,12 @@ const FadeText = () => {
     const [showSubText, setShowSubText] = useState(false);
     const [fadeOutWelcome, setFadeOutWelcome] = useState(false);
     const [fadeOutSubText, setFadeOutSubText] = useState(false);
+    const [showSubTextB, setShowSubTextB] = useState(false);
+    const [fadeOutSubTextB, setFadeOutSubTextB] = useState(false);
+    const [showSubTextC, setShowSubTextC] = useState(false);
+    const [fadeOutSubTextC, setFadeOutSubTextC] = useState(false);
+    const [showSubTextD, setShowSubTextD] = useState(false);
+    const [fadeOutSubTextD, setFadeOutSubTextD] = useState(false);
     const [showMainContent, setShowMainContent] = useState(false);
 
     useEffect(() => {
@@ -16,102 +22,83 @@ const FadeText = () => {
             setTimeout(() => {
                 setShowWelcome(false);
                 setShowSubText(true);
-            }, 2000); // Wait for fade-out to complete
-        }, 5000); // Show welcome text for 3 seconds
+            }, 2000);  
+        }, 5000);  
 
         const subTextTimer = setTimeout(() => {
             setFadeOutSubText(true);
             setTimeout(() => {
                 setShowSubText(false);
-                 setShowMainContent(true);
-            }, 2000);  
+                setShowSubTextB(true);   
+            }, 6000);  
            
         }, 7000);   
+
+        const subTextTimerB = setTimeout(() => {
+            setFadeOutSubTextB(true);
+            setTimeout(() => {
+                
+                setShowSubTextB(false);
+                 setShowSubTextC(true);
+            }, 8000);  
+           
+        }, 9000);   
+
+         const subTextTimerC = setTimeout(() => {
+            setFadeOutSubTextC(true);
+            setTimeout(() => {
+                
+                setShowSubTextC(false);
+                setShowSubTextD(true);
+            }, 10000);  
+           
+        }, 11000);   
+
+       const subTextTimerD = setTimeout(() => {
+            setFadeOutSubTextD(true);
+            setTimeout(() => {
+                
+                setShowSubTextD(false);
+                 setShowMainContent(true);
+            }, 12000);  
+           
+        }, 13000);   
 
         return () => {
             clearTimeout(welcomeTimer);
             clearTimeout(subTextTimer);
+            clearTimeout(subTextTimerB);
+            clearTimeout(subTextTimerC);
+            clearTimeout(subTextTimerD);
+            
         };
     }, []);
-
-    // Define the handleSubmit function
-    // const handleSubmit = (event) => {
-    //     event.preventDefault();
-    //     // Handle the form submission logic here
-    //     alert('Form submitted!');
-    // };
 
     return (
         <div>
             {showWelcome && (
                 <div className={`fade-text ${fadeOutWelcome ? "fade-out" : ""}`}>
-                    Welcome to My Page!
+                <p>   Hello There, this is <i>Shiri Rave</i>..</p>
                 </div>
             )}
             {showSubText && (
                 <div className={`fade-text ${fadeOutSubText ? "fade-out" : ""}`}>
-                    This is where you find all the latest information. Stay tuned!
-                </div>
-            )}
+                   <p>I just created a simple app </p>
+                    <p>To demonstrate my knowledge of -</p>
+                    </div> )} 
+                 {showSubTextB &&  (  <div className={`fade-text ${fadeOutSubTextB ? "fade-out" : ""}`}>
+                    <p><b>React.js, Node.js, Heroku </b> Cloud, <b><i>GenAI</i></b>, And <b>Docker.</b></p> 
+                     </div> )} 
+                {showSubTextC &&  (  <div className={`fade-text ${fadeOutSubTextC ? "fade-out" : ""}`}>     
+                    <p>Ask the chat to receive it's guidance.</p>    </div> )} 
+                {showSubTextD &&  (  <div className={`fade-text ${fadeOutSubTextD ? "fade-out" : ""}`}>    
+                    <p><b>E  n  j  o  y  !  !</b></p>
+                  </div> )} 
+               
+           
               {showMainContent && <MainContent  />} {/* Pass handleSubmit as a prop */}
         </div>
     );
 };
 
 export default FadeText;
-
-
-
-// import React, { useState } from 'react';
-// import axios from 'axios';
-
-// const App = () => {
-//   const [input, setInput] = useState('');
-//   const [response, setResponse] = useState('');
-
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-
-//     try {
-//       console.log('Submitting input:', input);
-//       if (!input.trim()) {
-//         setResponse('Please enter a valid input.');
-//         return;
-//       }
-//       // Make API call to the server
-//       const result = await axios.post('http://localhost:9000/generate', {
-//         prompt: input,
-//       }, {
-//         headers: {
-//           'Content-Type': 'application/json', 
-//         },
-//       });
- 
- 
-//       console.log('API response2:', result.data.reply);
-//       setResponse(result.data.reply || 'No response from AI');  
-//       setInput(''); // Clear input after submission
-//     } catch (error) {
-//       console.error('Error fetching response from AI:', error);
-//       setResponse('Error fetching response, please try again.');  
-//     }
-//   };
-
-//   return (
-//     <div>
-//       <h1>Generative AI Interaction</h1>
-//       <form onSubmit={handleSubmit}>
-//         <textarea
-//           value={input}
-//           onChange={(e) => setInput(e.target.value)}
-//           placeholder="Type your query here..."
-//         />
-//         <button type="submit">Submit</button>
-//       </form>
-//       <h2>Response:</h2>
-//       <p>{response}</p>
-//     </div>
-//   );
-// };
-
-// export default App;

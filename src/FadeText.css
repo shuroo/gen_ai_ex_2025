@@ -6,3 +6,54 @@
 .fade-text .fade-out  {
     opacity: 0;
 }
+
+.wrapper .request-block form {
+    width:100%;
+    height:100%;
+    border:1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper{
+  
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+align-self: center;
+align-items: stretch;
+display: flex;
+ 
+}
+
+.request-block { 
+  width: 500px;
+}
+.request-block > *{
+  
+  width: 100%;
+  height: inherit;
+  margin: 2%;
+ 
+}
+
+.request-block button{
+  
+  background-color: #66ffff;
+  color: black; 
+}
+
+.response-block{
+   width: 500px;
+  flex-direction: column;
+ 
+}
+
+h4 {
+  font-weight: normal;
+}
+
+div .wrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
