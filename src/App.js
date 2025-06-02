@@ -76,6 +76,7 @@ const FadeText = () => {
 
     return (
         <div>
+            
             {showWelcome && (
                 <div className={`fade-text ${fadeOutWelcome ? "fade-out" : ""}`}>
                 <p>   Hello There, this is <i>Shiri Rave</i>..</p>
@@ -90,12 +91,12 @@ const FadeText = () => {
                     <p><b>React.js, Node.js, Heroku </b> Cloud, <b><i>GenAI</i></b>, And <b>Docker.</b></p> 
                      </div> )} 
                 {showSubTextC &&  (  <div className={`fade-text ${fadeOutSubTextC ? "fade-out" : ""}`}>     
-                    <p>Ask the chat to receive it's guidance.</p>    </div> )} 
+                    <p>Ask the chat to receive its guidance.</p>    </div> )} 
                 {showSubTextD &&  (  <div className={`fade-text ${fadeOutSubTextD ? "fade-out" : ""}`}>    
                     <p><b>E  n  j  o  y  !  !</b></p>
                   </div> )} 
-               
-           
+           {!showMainContent && (    <img src="my_photo.jpg" style={{width:"6%"}} alt=""/>
+           )}
               {showMainContent && <MainContent  />} {/* Pass handleSubmit as a prop */}
         </div>
     );
