@@ -59,7 +59,7 @@ const MainContent = ({ onSubmit }) => {
     return (
            
 
-            <div class="wrapper"><div class="request-block">
+            <div className="wrapper"><div className="request-block">
       <h4>Ask the chat anything...</h4>
       <form onSubmit={handleSubmit}>
         <textarea 
@@ -70,7 +70,7 @@ const MainContent = ({ onSubmit }) => {
         <button type="submit">Submit</button>
       </form>
       </div>
-     <div class="response-block">
+     <div className="response-block">
      {response?  <h5>Response:</h5> : ''}
       <p>{response}</p>
        {response && afterText?  <b><i>Great! now, do it again...</i></b> : ''}

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './FadeText.css'; 
-import MainContent from './Main'; 
+import MainContent from './Main';   
 
 const FadeText = () => {
     const [showWelcome, setShowWelcome] = useState(true);
@@ -16,7 +16,10 @@ const FadeText = () => {
     const [showMainContent, setShowMainContent] = useState(false);
 
     useEffect(() => {
+   
         const welcomeTimer = setTimeout(() => {
+
+            document.title = "my_photo.jpg"
 
             setFadeOutWelcome(true);
             setTimeout(() => {
@@ -75,6 +78,7 @@ const FadeText = () => {
     }, []);
 
     return (
+        
         <div>
             
             {showWelcome && (
