@@ -99,7 +99,7 @@ const FadeText = () => {
                 {showSubTextD &&  (  <div className={`fade-text ${fadeOutSubTextD ? "fade-out" : ""}`}>    
                     <p><b>E  n  j  o  y  !  !</b></p>
                   </div> )} 
-           {!showMainContent && (    <img src="my_photo.jpg" style={{width:"6%"}} alt=""/>
+           {!showMainContent && (    <img src="my_photo.jpg" style={{width:"25%"}} alt=""/>
            )}
               {showMainContent && <MainContent  />} {/* Pass handleSubmit as a prop */}
         </div>

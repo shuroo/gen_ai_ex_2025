@@ -26,7 +26,7 @@ display: flex;
 }
 
 .request-block { 
-  width: 150%;
+  width: 110%;
   text-align: center;
 }
 .request-block > *{
@@ -44,7 +44,7 @@ display: flex;
 }
 
 .response-block{
-   width: 150%;
+   width: 110%;
    text-align: center;
   flex-direction: column;
  
@@ -58,7 +58,12 @@ div .wrapper{
     display: flex;
     justify-content: center;
     flex-direction: column;
+    width:100%;
 
+}
+
+img{
+  width:50%;
 }
 
 textarea{
@@ -68,6 +73,6 @@ textarea{
 
 form{
   text-align: center;
-  width: 150%;
+  width: 110%;
 }
 
