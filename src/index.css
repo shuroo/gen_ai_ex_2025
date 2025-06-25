@@ -24,4 +24,9 @@ code {
     monospace;
 }
 
+form{
+  text-align: center;
+  width: 150%;
+}
+
 

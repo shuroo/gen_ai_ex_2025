@@ -26,7 +26,8 @@ display: flex;
 }
 
 .request-block { 
-  width: 500px;
+  width: 150%;
+  text-align: center;
 }
 .request-block > *{
   
@@ -43,7 +44,8 @@ display: flex;
 }
 
 .response-block{
-   width: 500px;
+   width: 150%;
+   text-align: center;
   flex-direction: column;
  
 }
@@ -58,3 +60,14 @@ div .wrapper{
     flex-direction: column;
 
 }
+
+textarea{
+  text-align:start;
+}
+
+
+form{
+  text-align: center;
+  width: 150%;
+}
+
