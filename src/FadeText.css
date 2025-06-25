@@ -22,11 +22,12 @@
 align-self: center;
 align-items: stretch;
 display: flex;
+width:100%; 
  
 }
 
 .request-block { 
-  width: 110%;
+  width: 100%;
   text-align: center;
 }
 .request-block > *{
@@ -36,6 +37,8 @@ display: flex;
   margin: 2%;
  
 }
+ 
+
 
 .request-block button{
   
@@ -44,7 +47,7 @@ display: flex;
 }
 
 .response-block{
-   width: 110%;
+   width: inherit; 
    text-align: center;
   flex-direction: column;
  
